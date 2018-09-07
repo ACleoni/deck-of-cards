@@ -1,5 +1,33 @@
-extends layout
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>Deck of cards</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class='container'>
+      <div class="deck">
+      <form method="POST", action="/shuffle">
+        <input value="Shuffle Deck" type="submit" class='shuffle'>
 
-block content
-  h1= title
-  p Welcome to #{title}
+        </input>
+      </form>
+      <form method="POST", action="/deal">
+        <input value="Deal Card" type="submit" class='deal'>
+
+        </input>
+      </form>
+      </div>
+
+      <div class='card' id='card'>
+
+      </div>
+    </div>
+  </div>
+  <script src="javascripts/main.js"></script>
+</body>
+</html>

@@ -4,6 +4,7 @@ class Deck
     {
         try
         {  
+            // The initial deck
             const symbols = ["∆", "ß", "£", "§", "•", "$", "+", "ø"]
 
             const newDeck = await function shuffle(a) {
@@ -14,12 +15,30 @@ class Deck
                 }
                 return a
             }
-            return (newDeck(symbols))
+            // Passes the new shuffled deck to the _dealCard() function which will return the zeroth symbol in the array
+            return this._dealCard((newDeck(symbols)))
         }
         catch(err)
         {
             console.error(err)
         }
+    }
+
+    async _dealCard(a)
+    {
+        try
+        {
+            const dealtCard = await function deal(a) {
+                // Returns the first card in the new array of symbols. Similar to the top card of a real deck.
+                return a[0]
+        }
+            return dealtCard(a)
+        }
+        catch(err)
+        {
+            console.error(err)
+        }
+
     }
 }
 

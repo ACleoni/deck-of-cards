@@ -29,11 +29,15 @@ router.post('/deal', (req, res, next) => {
         return res
     })
     .then((card) => {
-        console.log(card)
+        // console.log(card)
+
+        // Checks if the deck is empty
+        // If there is a card, deal it
         if (card)
         {
             res.render('index', {card: card})
         } 
+        // Or else prompt the user to reshuffle the deck
         else 
         {
             res.render('index', {card: 'Deck is empty! Please reshuffle.'})

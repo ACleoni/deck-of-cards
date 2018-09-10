@@ -7,21 +7,67 @@ class Deck
     constructor()
     {
         // The initial deck
-        // Inlcudes 13 "card names"
+        // 54 card count
         this.symbols = [
-            "Alpha", 
-            "Beta", 
-            "Charlie", 
-            "Delta", 
-            "Echo", 
-            "Foxtrot", 
-            "Golf", 
-            "Hotel", 
-            "India", 
-            "Juliett", 
-            "Kilo", 
-            "Lima",
-            "Mike"
+            // The Spades
+            "Ace \u2660", 
+            "2 \u2660", 
+            "3 \u2660", 
+            "4 \u2660", 
+            "5 \u2660", 
+            "6 \u2660", 
+            "7 \u2660", 
+            "8 \u2660", 
+            "9 \u2660", 
+            "10 \u2660", 
+            "Jack \u2660", 
+            "Queen \u2660",
+            "King \u2660",
+            // The Hearts
+            "Ace \u2665", 
+            "2 \u2665", 
+            "3 \u2665", 
+            "4 \u2665", 
+            "5 \u2665", 
+            "6 \u2665", 
+            "7 \u2665", 
+            "8 \u2665", 
+            "9 \u2665", 
+            "10 \u2665", 
+            "Jack \u2665", 
+            "Queen \u2665",
+            "King \u2665",
+            // The Clubs
+            "Ace \u2663", 
+            "2 \u2663", 
+            "3 \u2663", 
+            "4 \u2663", 
+            "5 \u2663", 
+            "6 \u2663", 
+            "7 \u2663", 
+            "8 \u2663", 
+            "9 \u2663", 
+            "10 \u2663", 
+            "Jack \u2663", 
+            "Queen \u2663",
+            "King \u2663",
+            // The Diamonds
+            "Ace \u2666", 
+            "2 \u2666", 
+            "3 \u2666", 
+            "4 \u2666", 
+            "5 \u2666", 
+            "6 \u2666", 
+            "7 \u2666", 
+            "8 \u2666", 
+            "9 \u2666", 
+            "10 \u2666", 
+            "Jack \u2666", 
+            "Queen \u2666",
+            "King \u2666",
+            // The Jokers
+            "Joker (Guarantee)",
+            "Joker"
         ]
     }
     async _shuffleDeck()

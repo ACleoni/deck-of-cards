@@ -14,8 +14,6 @@ router.post('/shuffle', (req, res, next) => {
         return res
     })
     .then(() => {
-        // Sets a cookie with the name of the card to be rendered from the main.js file
-        res.clearCookie("Card")
         res.redirect('/')
     })
     .catch((err) => {
@@ -31,9 +29,15 @@ router.post('/deal', (req, res, next) => {
         return res
     })
     .then((card) => {
-        // Sets a cookie with the name of the card to be rendered from the main.js file
-        res.cookie("Card", card)
-        res.redirect('/')
+        console.log(card)
+        if (card)
+        {
+            res.render('index', {card: card})
+        } 
+        else 
+        {
+            res.render('index', {card: 'Deck is empty! Please reshuffle.'})
+        }
     })
     .catch((err) => {
         console.error(err)
